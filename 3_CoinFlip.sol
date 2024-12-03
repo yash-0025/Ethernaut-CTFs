@@ -8,7 +8,10 @@ pragma solidity ^0.8.0;
 
 // Q.] Here we have to make a guess and it should be correct consecutively 10 times
 // So we will create a contract which will help us do that 
-// 
+// To make correct  guess we need to use the code they are using to do the flip
+// So first we will create a function which will only allow the transaction when we get the correct guess
+// To Guess the number we will use the FACTOR which the main contract contain along with the the function which perform coinflip so that we can run a function which will always guess correct flip.
+// Then we will call the flip function 10 times as we have to get the consecutive wins 10 times.
 contract Attack {
     CoinFlip private immutable coinflip;
     uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
